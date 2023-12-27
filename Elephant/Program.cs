@@ -14,7 +14,6 @@ namespace Elephant
             while (true)
             {
                 char keyPress = Console.ReadKey(true).KeyChar;
-                if (keyPress != '1' && keyPress != '2' && keyPress != '3') continue;
 
                 Console.WriteLine("You pressed " + keyPress);
                 switch (keyPress)
@@ -33,6 +32,16 @@ namespace Elephant
                         lucinda = lloyd;
                         lloyd = temp;
                         break;
+                    case '4':
+                        lloyd = lucinda;
+                        lloyd.EarSize = 4321;
+                        lloyd.WhoAmI();
+                        break;
+                    case '5':
+                        lucinda.SpeakTo(lloyd, "Hi, Lloyd!");
+                        break;
+                    default:
+                        continue;
                 }
 
                 Console.WriteLine();
